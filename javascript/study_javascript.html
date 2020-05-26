@@ -13,9 +13,8 @@
         }
         sayHello();
 
-        
-
-        var sayHelloObject=function(x){
+        //匿名函数
+        var sayHelloObject= function(x){
             document.writeln('<br>');//这一行指使结果分行，另起一行
             document.writeln("x=",x);
         };
@@ -45,6 +44,7 @@
             document.writeln('<br>'+s);
         }(1,100);
 
+
         var sum_while=function(start,end){
             var s=0;
             var i=start;
@@ -65,6 +65,9 @@
             }
         }(new Array("a","test","d",2,4.0,56,[1,2,4,6]))
 
+
+
+
         var static_person={
             name:"zhanwenjuan",
             birth:1999,
@@ -74,7 +77,7 @@
             score:null
         }
 
-        
+
         //添加对象的行为     
         static_person.eat=function(){
             alert("object can eat");
@@ -96,8 +99,6 @@
         static_person.eat();
 
 
-        
-
         var person=new Object();
         person.name="zhanwenjuan";
         person.eat=function(){
@@ -117,6 +118,15 @@
         p=new function_person("zhangshan");
         p.eat();
 
+        //map
+        var m=new Map([['zhanwenjuan',90],['zhangsan',70]]);
+        document.writeln('<br>');
+        document.writeln(m.get('zhanwenjuan'));
+        m.delete('zhanwenjuan');
+        document.writeln('<br>');
+        document.writeln(m.get('zhanwenjuan'));
+        m.set('adam',70);
+        document.writeln(m.get('adam'));
 
         
     </script>
